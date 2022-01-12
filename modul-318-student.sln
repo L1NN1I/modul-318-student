@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportApp", "TransportAp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransportAppTest", "TransportAppTest\TransportAppTest.vcxproj", "{0C3D0E6A-CEFB-480B-856A-917838EFF716}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{1647AEE5-5237-475A-977F-C2D86882DC96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,12 @@ Global
 		{0C3D0E6A-CEFB-480B-856A-917838EFF716}.Release|x64.Build.0 = Release|x64
 		{0C3D0E6A-CEFB-480B-856A-917838EFF716}.Release|x86.ActiveCfg = Release|Win32
 		{0C3D0E6A-CEFB-480B-856A-917838EFF716}.Release|x86.Build.0 = Release|Win32
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Debug|Any CPU.ActiveCfg = Debug
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Debug|x64.ActiveCfg = Debug
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Debug|x86.ActiveCfg = Debug
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Release|Any CPU.ActiveCfg = Release
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Release|x64.ActiveCfg = Release
+		{1647AEE5-5237-475A-977F-C2D86882DC96}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,18 +32,6 @@ namespace TransportApp
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            MainMenu frm = new MainMenu();      // Objekt von MainMenu erstellen:
-            frm.Show();                         // MainMenu anzeigen
-            this.Hide();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
 
         private void FillDataGridView(StationBoardRoot stationBoardRoot)
         {
@@ -51,30 +39,25 @@ namespace TransportApp
             foreach (StationBoard stationBoard in stationBoardRoot.Entries)                         // Die erhaltenen Stationen ins DataGridView füllen
             {
                 StationBoardDataGrid.Rows.Add(
-                    stationBox.Text,
+                    tbxStation.Text,
                     stationBoard.To,
                     stationBoard.Name
                 );
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-          {
-              MainMenu frm = new MainMenu();                          // Objekt von MainMenu erstellen:
-              frm.Show();                                             // MainMenu anzeigen
-              this.Hide();
-          }
+
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (stationBox.Text != "")                                                        // Validation der Station
+                if (tbxStation.Text != "")                                                        // Validation der Station
                 {
-                    if (_stationExists.Station(stationBox.Text))
+                    if (_stationExists.Station(tbxStation.Text))
                     {
                         StationBoardRoot stationBoardRoot = new StationBoardRoot();                       // Wert der eingegebener Station der Funktion "GetStationBoard" übergeben
-                        stationBoardRoot = _transport.GetStationBoard(stationBox.Text, "");
+                        stationBoardRoot = _transport.GetStationBoard(tbxStation.Text, "");
                         FillDataGridView(stationBoardRoot);
                     }
                     else
@@ -98,12 +81,12 @@ namespace TransportApp
         {
             try
             {
-                if (stationBox.Text != "")                                                        // Validation der Station
+                if (tbxStation.Text != "")                                                        // Validation der Station
                 {
-                    if (_stationExists.Station(stationBox.Text))
+                    if (_stationExists.Station(tbxStation.Text))
                     {
                         StationBoardRoot stationBoardRoot = new StationBoardRoot();                       // Wert der eingegebener Station der Funktion "GetStationBoard" übergeben
-                        stationBoardRoot = _transport.GetStationBoard(stationBox.Text, "");
+                        stationBoardRoot = _transport.GetStationBoard(tbxStation.Text, "");
                         FillDataGridView(stationBoardRoot);
                     }
                     else
@@ -121,6 +104,25 @@ namespace TransportApp
                 Exception ex = new Exception();
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnDepartureListBack_Click(object sender, EventArgs e)
+        {
+            MainMenu frm = new MainMenu();                              // Objekt von MainMenu erstellen
+            this.Close();                                               // Aktuelles Fenster schliessen
+            frm.Show();                                                 // MainMenu anzeigen
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            MainMenu frm = new MainMenu();                          // Objekt von MainMenu erstellen:
+            frm.Show();                                             // MainMenu anzeigen
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

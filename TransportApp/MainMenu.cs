@@ -57,7 +57,7 @@ namespace TransportApp
 
         private void btnMainMenuAbort_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
     }
 }

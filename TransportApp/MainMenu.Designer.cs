@@ -29,6 +29,7 @@ namespace TransportApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.btnMainMenuSearchConnection = new System.Windows.Forms.Button();
             this.btnMainMenuNavigation = new System.Windows.Forms.Button();
@@ -108,6 +109,7 @@ namespace TransportApp
             this.Controls.Add(this.btnMainMenuNavigation);
             this.Controls.Add(this.btnMainMenuSearchConnection);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.Text = "Hauptmenu";
             this.ResumeLayout(false);

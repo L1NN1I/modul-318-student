@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.stationBox = new System.Windows.Forms.TextBox();
+            this.tbxStation = new System.Windows.Forms.TextBox();
             this.lblDepartureStation = new System.Windows.Forms.Label();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.btnSchliessen = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDepartureListBack = new System.Windows.Forms.Button();
             this.StationBoardDataGrid = new System.Windows.Forms.DataGridView();
             this.Abfahrtsstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftsstation = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +55,12 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // stationBox
+            // tbxStation
             // 
-            this.stationBox.Location = new System.Drawing.Point(100, 35);
-            this.stationBox.Name = "stationBox";
-            this.stationBox.Size = new System.Drawing.Size(173, 23);
-            this.stationBox.TabIndex = 9;
+            this.tbxStation.Location = new System.Drawing.Point(100, 35);
+            this.tbxStation.Name = "tbxStation";
+            this.tbxStation.Size = new System.Drawing.Size(173, 23);
+            this.tbxStation.TabIndex = 9;
             // 
             // lblDepartureStation
             // 
@@ -81,25 +81,27 @@
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 15;
             this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnSchliessen
+            // btnClose
             // 
-            this.btnSchliessen.Location = new System.Drawing.Point(537, 400);
-            this.btnSchliessen.Name = "btnSchliessen";
-            this.btnSchliessen.Size = new System.Drawing.Size(75, 23);
-            this.btnSchliessen.TabIndex = 18;
-            this.btnSchliessen.Text = "Schliessen";
-            this.btnSchliessen.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(537, 400);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "Schliessen";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnReturn
+            // btnDepartureListBack
             // 
-            this.btnReturn.Location = new System.Drawing.Point(442, 400);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(75, 23);
-            this.btnReturn.TabIndex = 17;
-            this.btnReturn.Text = "Zurück";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            this.btnDepartureListBack.Location = new System.Drawing.Point(442, 400);
+            this.btnDepartureListBack.Name = "btnDepartureListBack";
+            this.btnDepartureListBack.Size = new System.Drawing.Size(75, 23);
+            this.btnDepartureListBack.TabIndex = 17;
+            this.btnDepartureListBack.Text = "Zurück";
+            this.btnDepartureListBack.UseVisualStyleBackColor = true;
+            this.btnDepartureListBack.Click += new System.EventHandler(this.btnDepartureListBack_Click);
             // 
             // StationBoardDataGrid
             // 
@@ -165,11 +167,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 450);
             this.Controls.Add(this.StationBoardDataGrid);
-            this.Controls.Add(this.btnSchliessen);
-            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnDepartureListBack);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.stationBox);
+            this.Controls.Add(this.tbxStation);
             this.Controls.Add(this.lblDepartureStation);
             this.Name = "DepartureList";
             this.Text = "Stationsverbindungen";
@@ -183,11 +185,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox stationBox;
+        private System.Windows.Forms.TextBox tbxStation;
         private System.Windows.Forms.Label lblDepartureStation;
         private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Button btnSchliessen;
-        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnDepartureListBack;
         private System.Windows.Forms.DataGridView StationBoardDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtsstation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftsstation;
