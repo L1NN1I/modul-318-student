@@ -16,5 +16,9 @@
         Task<Connections> GetConnectionsAsync(string fromStation, string toStation);
 
         Connections GetConnections(string fromStation, string toStation);
+
+        Task<Connections> GetConnectionsAsync(string fromStation, string toStation, string departuredate, string departuretime);
+
+        Connections GetConnections(string fromStation, string toStation, string departuredate, string departuretime);
     }
 }
